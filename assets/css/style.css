@@ -1,7 +1,16 @@
 .title{
-
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
 }
 
 .game{
-    
+    margin: 100px 100px 100px 100px;
+}
+
+.footer{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container{
+    margin:0 auto;
 }
