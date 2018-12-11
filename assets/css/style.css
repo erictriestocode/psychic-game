@@ -1,6 +1,5 @@
 .title{
     font-family: 'Press Start 2P', cursive;
-    display: flex;
 }
 
 .game{
@@ -12,5 +11,10 @@
 }
 
 .container{
-    margin:0 auto;
+    text-align: center;
+    margin: auto;
+}
+
+#input {
+    font-family: 'Press Start 2P', cursive;
 }

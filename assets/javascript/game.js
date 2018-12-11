@@ -1,12 +1,13 @@
 // Javascript file for Psychic game
 
 
-// User Guesses
+// Player Guesses
 var userGuess;
 var computerGuess;
 // tracking wins/losses
 var wins = 0;
 var losses = 0;
+var guessesLeft = 10;
 // tracking user guesses
 var guessList = [];
 // computer choice array
@@ -18,24 +19,34 @@ var computerGuess = compChoice[guessNum];
 console.log(computerGuess);
 console.log(guessNum);
 
-function game(){
+// document.getElementById("game").onkeypress = userGuess;
 
-    
+
+console.log(userGuess);
+
+// trying to at least call a function
+// document.getElementById("input").addEventListener("keypress", mainGame);
+
+// Main game code
+function mainGame(){
+    console.log("its working!");
 
 }
 
 
+// function compareGuess(user,computer) {
+    
+//     // append user guess to guestlist
+//     // display guess list
+//     if(userGuess === computerGuess){
+//         //print you win
+//         wins++;
+//     } else {
+//         //alert you lose
+//         losses++
+//     }
 
-
-
-
-
-
-
-
-
-
-
+// }
 
 
 
