@@ -20,11 +20,7 @@ console.log(computerGuess);
 console.log(guessNum);
 console.log(userGuess);
 
-// var scoreBoard = "<p>Wins: " + wins "</p>" + "<p>Losses: " + losses "</p>" + "<p>Guesses Left: " + guessesLeft "</p>" + "<p>Guesses so far: " + guessList.join(', ') "</p>";
 
-
-
-document.getElementById("game").innerHTML = scoreBoard;
 
 document.onkeyup = function(e){
     var userGuess = e.key;
@@ -49,7 +45,9 @@ function mainGame(user,comp){
         losses++;
         reset();
     }
-   
+    var scoreBoard = "<p>Wins: " + wins + "</p>" + "<p>Loses: " + losses + "<p>Guesses Left: " + guessesLeft + "<p>Your Guesses so far: " + guessList.join(', '); 
+
+    document.getElementById("game").innerHTML = scoreBoard;
 }
 
 // function to reset scoreboard
