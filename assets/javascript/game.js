@@ -22,6 +22,7 @@ console.log(userGuess);
 
 
 
+// function that triggers the game
 document.onkeyup = function(e){
     var userGuess = e.key;
     guessList.push(userGuess);
@@ -45,8 +46,9 @@ function mainGame(user,comp){
         losses++;
         reset();
     }
+    //Create the scoreboard
     var scoreBoard = "<p>Wins: " + wins + "</p>" + "<p>Loses: " + losses + "<p>Guesses Left: " + guessesLeft + "<p>Your Guesses so far: " + guessList.join(', '); 
-
+    // Add HTML to game div in the HTML
     document.getElementById("game").innerHTML = scoreBoard;
 }
 
@@ -55,11 +57,3 @@ function reset(){
     guessesLeft = 10;
     guessList = [];
 }
-
-
-
-
-//reload page when complete per: https://stackoverflow.com/questions/16763665/html5-javascript-reset-game-screen
-//probably incorrect
-// location.reload();
-
