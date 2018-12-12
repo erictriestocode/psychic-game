@@ -18,35 +18,45 @@ var computerGuess = compChoice[guessNum];
 // console logs for testing variables
 console.log(computerGuess);
 console.log(guessNum);
-
-// document.getElementById("game").onkeypress = userGuess;
-
-
 console.log(userGuess);
 
-// trying to at least call a function
-// document.getElementById("input").addEventListener("keypress", mainGame);
+// var scoreBoard = "<p>Wins: " + wins "</p>" + "<p>Losses: " + losses "</p>" + "<p>Guesses Left: " + guessesLeft "</p>" + "<p>Guesses so far: " + guessList.join(', ') "</p>";
+
+
+
+document.getElementById("game").innerHTML = scoreBoard;
+
+document.onkeyup = function(e){
+    var userGuess = e.key;
+    guessList.push(userGuess);
+    mainGame(userGuess,computerGuess);
+ }
+
 
 // Main game code
-function mainGame(){
-    console.log("its working!");
+function mainGame(user,comp){
+    console.log("its working!"); //just testing!
+    if (user === comp) {
+        console.log("you win!"); //testing to see if the logic is working
+        wins++;
+        console.log(wins);
+    } else {
+        guessesLeft--;
+        console.log(guessesLeft); //testing to see if the logic is working
+    }
 
+    if (guessesLeft === 0){
+        losses++;
+        reset();
+    }
+   
 }
 
-
-// function compareGuess(user,computer) {
-    
-//     // append user guess to guestlist
-//     // display guess list
-//     if(userGuess === computerGuess){
-//         //print you win
-//         wins++;
-//     } else {
-//         //alert you lose
-//         losses++
-//     }
-
-// }
+// function to reset scoreboard
+function reset(){
+    guessesLeft = 10;
+    guessList = [];
+}
 
 
 
@@ -55,4 +65,3 @@ function mainGame(){
 //probably incorrect
 // location.reload();
 
-// also this
